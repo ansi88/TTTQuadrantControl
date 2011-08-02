@@ -1,47 +1,44 @@
-TTTQuadrantControl
-=================
-
+# TTTQuadrantControl
 ## A 4-way button disguised as a table cell, as seen in Tweetie 2
 
 ![Screenshot of TTTQuadrantControl](http://mattt.github.com/TTTQuadrantControl/screenshot.png "TTTQuadrantControl Screenshot")
 
 ## Demo
 
-After cloning the repository, open the Xcode Project file <tt>/TTTQuadrantControl/Example/Nitwit.xcodeproj</tt>. Build and Run in the iPhone Simulator to see it in action. The specified quadrant actions are stubbed out as an example.
+After cloning the repository, open the Xcode Project file `/TTTQuadrantControl/Example/Nitwit.xcodeproj`. Build and Run to see it in action. The specified quadrant actions are stubbed out as an example.
 
-## Usage
+## Example Usage
 
-Initialize as follows in a UITableViewController or subclass (works best with table views with a <strong>grouped</strong> style):
+Initialize as follows in a `UITableViewController` or subclass (works best with table views with a __grouped__ style):
 
-<code>
-  TTTQuadrantControl * quadrantControl = [[[TTTQuadrantControl alloc] initWithFrame:CGRectMake(10, 20, 300, 90)] autorelease];
-	quadrantControl.delegate = self;
-	[quadrantControl setNumber:[NSNumber numberWithInt:127]
-					   caption:@"following"
-						action:@selector(didSelectFollowingQuadrant)
-				   forLocation:TopLeftLocation];
-	
-	[quadrantControl setNumber:[NSNumber numberWithInt:1728]
-					   caption:@"tweets" 
-						action:@selector(didSelectTweetsQuadrant)
-				   forLocation:TopRightLocation];
-	
-	[quadrantControl setNumber:[NSNumber numberWithInt:352] 
-					   caption:@"followers" 
-						action:@selector(didSelectFollowersQuadrant)
-				   forLocation:BottomLeftLocation];
-	
-	[quadrantControl setNumber:[NSNumber numberWithInt:61] 
-					   caption:@"favorites" 
-						action:@selector(didSelectFavoritesQuadrant)
-				   forLocation:BottomRightLocation];
-	[self.tableSectionFooterView addSubview:quadrantControl];
-</code>
+``` objective-c
+TTTQuadrantControl *quadrantControl = [[[TTTQuadrantControl alloc] initWithFrame:CGRectMake(10, 20, 300, 90)] autorelease];
+quadrantControl.delegate = self;
+[quadrantControl setNumber:[NSNumber numberWithInt:127]
+                   caption:@"following"
+                    action:@selector(didSelectFollowingQuadrant)
+               forLocation:TopLeftLocation];
 
-- <tt>number</tt> - the number displayed at top
-- <tt>caption</tt> - the text displayed below the number
-- <tt>action</tt> - a selector to be performed by the delegate
-- <tt>location</tt> - the specified quadrant to set these values and action for ([TopLeftLocation|TopRightLocation|BottomLeftLocation|BottomRightLocation])
+[quadrantControl setNumber:[NSNumber numberWithInt:1728]
+                   caption:@"tweets"
+                    action:@selector(didSelectTweetsQuadrant)
+               forLocation:TopRightLocation];
+
+[quadrantControl setNumber:[NSNumber numberWithInt:352]
+                   caption:@"followers"
+                    action:@selector(didSelectFollowersQuadrant)
+               forLocation:BottomLeftLocation];
+
+[quadrantControl setNumber:[NSNumber numberWithInt:61]
+                   caption:@"favorites"
+                    action:@selector(didSelectFavoritesQuadrant)
+               forLocation:BottomRightLocation];
+```
+
+- `number` - the number displayed at top
+- `caption` - the text displayed below the number
+- `action` - a selector to be performed by the delegate
+- `location` - the specified quadrant to set these values and action for ([TopLeftLocation|TopRightLocation|BottomLeftLocation|BottomRightLocation])
 
 ## Requirements
 
@@ -75,7 +72,7 @@ TTTQuadrantControl is licensed under the MIT License:
   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
-  
+
 ## Credit
 
 Inspired entirely by the amazing [Tweetie 2 for iPhone](http://www.atebits.com/tweetie-iphone/), by [atebits](http://www.atebits.com/)
