@@ -3,13 +3,7 @@
 
 ![Screenshot of TTTQuadrantControl](http://mattt.github.com/TTTQuadrantControl/screenshot.png "TTTQuadrantControl Screenshot")
 
-## Demo
-
-After cloning the repository, open the Xcode Project file `/TTTQuadrantControl/Example/Nitwit.xcodeproj`. Build and Run to see it in action. The specified quadrant actions are stubbed out as an example.
-
 ## Example Usage
-
-Initialize as follows in a `UITableViewController` or subclass (works best with table views with a __grouped__ style):
 
 ``` objective-c
 TTTQuadrantControl *quadrantControl = [[[TTTQuadrantControl alloc] initWithFrame:CGRectMake(10, 20, 300, 90)] autorelease];
@@ -38,16 +32,7 @@ quadrantControl.delegate = self;
 - `number` - the number displayed at top
 - `caption` - the text displayed below the number
 - `action` - a selector to be performed by the delegate
-- `location` - the specified quadrant to set these values and action for ([TopLeftLocation|TopRightLocation|BottomLeftLocation|BottomRightLocation])
-
-## Requirements
-
-- iPhone OS 3.0 or higher
-- QuartzCore framework
-
-## Issues
-
-In its current release, the horizontal and vertical dividing lines in the quadrant control appear to be drawing between pixel boundaries. If you are handy with CoreGraphics and can fix this, I would greatly appreciate it.
+- `location` - the specified quadrant
 
 ## License
 
