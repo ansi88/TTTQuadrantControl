@@ -20,28 +20,32 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
 // SOFTWARE.
 
-#import "NitwitAppDelegate.h"
+#import "AppDelegate.h"
 #import "ProfileViewController.h"
 
+@interface NitwitAppDelegate ()
+@property (readwrite, nonatomic, retain) ProfileViewController *viewController;
+@end
+
 @implementation NitwitAppDelegate
-
-@synthesize window;
-@synthesize viewController;
-
+@synthesize window = _window;
+@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {        
-    [window addSubview:viewController.view];
-    [window makeKeyAndVisible];
+    self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    
+    self.viewController = [[[ProfileViewController alloc] init] autorelease];
+    [self.window addSubview:self.viewController.view];
+    
+    [self.window makeKeyAndVisible];
 	
 	return YES;
 }
 
-
 - (void)dealloc {
-    [viewController release];
-    [window release];
+    [_viewController release];
+    [_window release];
     [super dealloc];
 }
-
 
 @end

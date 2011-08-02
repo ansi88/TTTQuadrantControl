@@ -41,6 +41,15 @@ enum {
 @synthesize twitterUserIDLabel = _twitterUserIDLabel;
 @synthesize quadrantControl = _quadrantControl;
 
+- (id)init {
+    self = [super initWithNibName:@"Profile" bundle:nil];
+    if (!self) {
+        return nil;
+    }
+    
+    return self;
+}
+
 - (void)dealloc {
     [_avatarImageView release];
     [_nameLabel release];

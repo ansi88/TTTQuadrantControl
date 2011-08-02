@@ -25,12 +25,11 @@
 @class ProfileViewController;
 
 @interface NitwitAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow * window;
-    ProfileViewController * viewController;
+    UIWindow *_window;
+    ProfileViewController *_viewController;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow * window;
-@property (nonatomic, retain) IBOutlet ProfileViewController * viewController;
+@property (nonatomic, retain) UIWindow *window;
 
 @end
 
