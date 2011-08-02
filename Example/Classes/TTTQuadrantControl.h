@@ -21,7 +21,6 @@
 // SOFTWARE.
 
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
 
 typedef enum {
     TopRightLocation    = 1,
@@ -53,6 +52,8 @@ typedef enum {
 - (TTTQuadrantLocation)locationAtPoint:(CGPoint)point;
 
 @end
+
+#pragma mark -
 
 @interface TTTQuadrantView : UIView {
 	NSNumber *_number;

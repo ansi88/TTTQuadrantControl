@@ -1,6 +1,6 @@
 // TTTQuadrantControl.m
 //
-// Copyright (c) 2010 Mattt Thompson
+// Copyright (c) 2011 Mattt Thompson (http://mattt.me/)
 // 
 // Permission is hereby granted, free of charge, to any person obtaining a copy 
 // of this software and associated documentation files (the "Software"), to deal 
@@ -20,9 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
 // SOFTWARE.
 
+#import <QuartzCore/QuartzCore.h>
 #import "TTTQuadrantControl.h"
 
-static NSUInteger const kTTTQuadrantNoActiveLocation = 0;
+static NSUInteger const kAFTTTQuadrantNullLocation = 0;
 
 @interface TTTQuadrantControl ()
 @property (readwrite, nonatomic, assign) TTTQuadrantLocation activeLocation;
@@ -128,9 +129,9 @@ static NSUInteger const kTTTQuadrantNoActiveLocation = 0;
 			return self.bottomLeftQuadrantView;
 		case BottomRightLocation: 
 			return self.bottomRightQuadrantView;
+        default:
+            return nil;
 	}
-    
-    return nil;
 }
 
 #pragma mark - UIResponder
@@ -152,17 +153,17 @@ static NSUInteger const kTTTQuadrantNoActiveLocation = 0;
 		case BottomRightLocation:
 			[self.delegate performSelector:[[self quadrantViewAtLocation:self.activeLocation] action]];
         default:
-            return;
+            break;
 	}
 	
-	self.activeLocation = kTTTQuadrantNoActiveLocation;
+	self.activeLocation = kAFTTTQuadrantNullLocation;
     
 	[self setNeedsDisplay];
 	[[self subviews] makeObjectsPerformSelector:@selector(setNeedsDisplay)];
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-	self.activeLocation = kTTTQuadrantNoActiveLocation;
+	self.activeLocation = kAFTTTQuadrantNullLocation;
 	
     [self setNeedsDisplay];
 	[[self subviews] makeObjectsPerformSelector:@selector(setNeedsDisplay)];
@@ -204,7 +205,7 @@ static NSUInteger const kTTTQuadrantNoActiveLocation = 0;
 	[self.topRightQuadrantView setHighlighted:NO];
 	[self.bottomLeftQuadrantView setHighlighted:NO];
 	[self.bottomRightQuadrantView setHighlighted:NO];
-	
+    	
 	// Draw gradient background for selected quadrant
 	if (self.activeLocation) {
         TTTQuadrantView *activeQuadrantView = [self quadrantViewAtLocation:self.activeLocation];
@@ -232,6 +233,7 @@ static NSUInteger const kTTTQuadrantNoActiveLocation = 0;
 
 @end
 
+#pragma mark -
 
 @implementation TTTQuadrantView
 @synthesize number = _number;
@@ -269,18 +271,14 @@ static NSUInteger const kTTTQuadrantNoActiveLocation = 0;
     
 	[(self.highlighted ? [UIColor whiteColor] : [UIColor blackColor]) set];
 	NSString * numberString = [_numberFormatter stringFromNumber:self.number];
-	CGSize numberTextSize = [numberString sizeWithFont:[UIFont boldSystemFontOfSize:22]
-												  constrainedToSize:self.bounds.size];
+	CGSize numberTextSize = [numberString sizeWithFont:[UIFont boldSystemFontOfSize:22] constrainedToSize:self.bounds.size];
 	CGPoint numberDrawPoint = CGPointMake(round((self.bounds.size.width - numberTextSize.width) / 2.0), 3.0f);
-	[numberString drawAtPoint:numberDrawPoint 
-					 withFont:[UIFont boldSystemFontOfSize:22]];
+	[numberString drawAtPoint:numberDrawPoint withFont:[UIFont boldSystemFontOfSize:22]];
 	
 	[(self.highlighted ? [UIColor whiteColor] : [UIColor darkGrayColor]) set];
-	CGSize captionTextSize = [self.caption sizeWithFont:[UIFont boldSystemFontOfSize:12]
-									  constrainedToSize:self.bounds.size];
+	CGSize captionTextSize = [self.caption sizeWithFont:[UIFont boldSystemFontOfSize:12] constrainedToSize:self.bounds.size];
 	CGPoint captionDrawPoint = CGPointMake(round((self.bounds.size.width - captionTextSize.width) / 2.0), 27.0f);
-	[self.caption drawAtPoint:captionDrawPoint 
-					 withFont:[UIFont boldSystemFontOfSize:12]];
+	[self.caption drawAtPoint:captionDrawPoint withFont:[UIFont boldSystemFontOfSize:12]];
 }
 
 @end

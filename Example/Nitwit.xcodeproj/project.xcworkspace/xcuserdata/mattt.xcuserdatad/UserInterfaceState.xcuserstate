@@ -1014,9 +1014,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>333999577.62080401</real>
-		<string>{2573, 1745}</string>
-		<string>{3897, 0}</string>
+		<real>334000807.21158099</real>
+		<string>{4513, 1975}</string>
+		<string>{5565, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1062,9 +1062,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>333998675.68852901</real>
-		<string>{0, 2037}</string>
-		<string>{1283, 0}</string>
+		<real>334000683.93731099</real>
+		<string>{607, 1669}</string>
+		<string>{1194, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1206,9 +1206,9 @@
 				</dict>
 			</array>
 		</dict>
-		<real>333999828.21593302</real>
-		<string>{315, 1937}</string>
-		<string>{1290, 0}</string>
+		<real>333999893.49370599</real>
+		<string>{1556, 1889}</string>
+		<string>{2824, 0}</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1821,7 +1821,7 @@
 				<integer>176</integer>
 			</dict>
 			<key>NS.time</key>
-			<real>333999780.750808</real>
+			<real>334000728.69093502</real>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -1832,7 +1832,7 @@
 			<key>$classname</key>
 			<string>NSDate</string>
 		</dict>
-		<string>Today at 12:43</string>
+		<string>Today at 12:58</string>
 		<integer>234</integer>
 		<dict>
 			<key>$class</key>
@@ -1903,7 +1903,7 @@
 				<integer>182</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/ProfileViewController.m</string>
+		<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/TTTQuadrantControl.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1921,7 +1921,15 @@
 				<integer>184</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/ProfileViewController.h</string>
+		<dict>
+			<key>$class</key>
+			<dict>
+				<key>CF$UID</key>
+				<integer>24</integer>
+			</dict>
+			<key>NS.string</key>
+			<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/TTTQuadrantControl.h</string>
+		</dict>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1939,7 +1947,7 @@
 				<integer>186</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/ProfileView.xib</string>
+		<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/ProfileViewController.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1957,15 +1965,7 @@
 				<integer>188</integer>
 			</dict>
 		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>24</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/TTTQuadrantControl.m</string>
-		</dict>
+		<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/ProfileViewController.h</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -1983,15 +1983,7 @@
 				<integer>190</integer>
 			</dict>
 		</dict>
-		<dict>
-			<key>$class</key>
-			<dict>
-				<key>CF$UID</key>
-				<integer>24</integer>
-			</dict>
-			<key>NS.string</key>
-			<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/TTTQuadrantControl.h</string>
-		</dict>
+		<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/ProfileView.xib</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2213,7 +2205,7 @@
 		<string>IDEShowUtilities</string>
 		<string>IDEEditorArea</string>
 		<true/>
-		<string>ProfileViewController.m</string>
+		<string>TTTQuadrantControl.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2604,7 +2596,7 @@
 		</dict>
 		<string>Nitwit</string>
 		<string>Classes</string>
-		<string>ProfileViewController.m</string>
+		<string>TTTQuadrantControl.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -2865,7 +2857,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>328</integer>
+					<integer>329</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -2877,11 +2869,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>353</integer>
+					<integer>354</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>361</integer>
+					<integer>362</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3065,7 +3057,7 @@
 				<integer>24</integer>
 			</dict>
 			<key>NS.string</key>
-			<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/ProfileViewController.m</string>
+			<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/TTTQuadrantControl.m</string>
 		</dict>
 		<dict>
 			<key>$classes</key>
@@ -3220,7 +3212,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>326</integer>
+					<integer>327</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3294,7 +3286,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>254</integer>
+					<integer>324</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3306,7 +3298,7 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>324</integer>
+					<integer>325</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3449,9 +3441,10 @@
 				</dict>
 			</array>
 		</dict>
-		<real>333999828.21695203</real>
-		<string>{315, 1937}</string>
-		<string>{1290, 0}</string>
+		<real>334000807.21245903</real>
+		<string>{4513, 1975}</string>
+		<string>{5565, 0}</string>
+		<string>UIView</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -3466,10 +3459,10 @@
 			<key>NS.relative</key>
 			<dict>
 				<key>CF$UID</key>
-				<integer>325</integer>
+				<integer>326</integer>
 			</dict>
 		</dict>
-		<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/ProfileViewController.m</string>
+		<string>file://localhost/Users/mattt/Code/Objective-C/TTTQuadrantControl/Example/Classes/TTTQuadrantControl.m</string>
 		<dict>
 			<key>$class</key>
 			<dict>
@@ -3480,7 +3473,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>327</integer>
+					<integer>328</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3493,10 +3486,6 @@
 			</dict>
 			<key>NS.keys</key>
 			<array>
-				<dict>
-					<key>CF$UID</key>
-					<integer>329</integer>
-				</dict>
 				<dict>
 					<key>CF$UID</key>
 					<integer>330</integer>
@@ -3517,6 +3506,10 @@
 					<key>CF$UID</key>
 					<integer>334</integer>
 				</dict>
+				<dict>
+					<key>CF$UID</key>
+					<integer>335</integer>
+				</dict>
 			</array>
 			<key>NS.objects</key>
 			<array>
@@ -3526,11 +3519,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>335</integer>
+					<integer>336</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>337</integer>
+					<integer>338</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
@@ -3538,11 +3531,11 @@
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>339</integer>
+					<integer>340</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>347</integer>
+					<integer>348</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3562,7 +3555,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>336</integer>
+					<integer>337</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -3584,7 +3577,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>338</integer>
+					<integer>339</integer>
 				</dict>
 			</array>
 			<key>NS.objects</key>
@@ -3613,7 +3606,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>340</integer>
+					<integer>341</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3627,11 +3620,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>341</integer>
+					<integer>342</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>344</integer>
+					<integer>345</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3656,11 +3649,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>342</integer>
+					<integer>343</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>343</integer>
+					<integer>344</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3687,11 +3680,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>345</integer>
+					<integer>346</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>346</integer>
+					<integer>347</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3714,7 +3707,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>348</integer>
+					<integer>349</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3728,11 +3721,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>349</integer>
+					<integer>350</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>351</integer>
+					<integer>352</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3757,11 +3750,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>342</integer>
+					<integer>343</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>350</integer>
+					<integer>351</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3787,11 +3780,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>345</integer>
+					<integer>346</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>352</integer>
+					<integer>353</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3813,7 +3806,7 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>354</integer>
+					<integer>355</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3827,11 +3820,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>355</integer>
+					<integer>356</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>358</integer>
+					<integer>359</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3856,11 +3849,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>356</integer>
+					<integer>357</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>357</integer>
+					<integer>358</integer>
 				</dict>
 			</array>
 		</dict>
@@ -3887,11 +3880,11 @@
 			<array>
 				<dict>
 					<key>CF$UID</key>
-					<integer>359</integer>
+					<integer>360</integer>
 				</dict>
 				<dict>
 					<key>CF$UID</key>
-					<integer>360</integer>
+					<integer>361</integer>
 				</dict>
 			</array>
 		</dict>
