@@ -21,66 +21,80 @@
 // SOFTWARE.
 
 #import "ProfileViewController.h"
-#import "MTQuadrantControl.h"
+#import "TTTQuadrantControl.h"
 
-
-typedef enum {
+enum {
 	InformationSectionIndex,
 } ProfileSectionIndicies;
 
-typedef enum {
+enum {
 	BioRowIndex,
 	LocationRowIndex,
 	WebsiteRowIndex,
 } InformationSectionRowIndicies;
 
-
 @implementation ProfileViewController
+@synthesize avatarImageView = _avatarImageView;
+@synthesize nameLabel = _nameLabel;
+@synthesize twitterUsernameLabel = _twitterUsernameLabel;
+@synthesize twitterUserIDLabel = _twitterUserIDLabel;
+@synthesize quadrantControl = _quadrantControl;
 
-@synthesize tableSectionFooterView;
+- (void)dealloc {
+    [_avatarImageView release];
+    [_nameLabel release];
+    [_twitterUsernameLabel release];
+    [_twitterUserIDLabel release];
+	[_quadrantControl release];
+    [super dealloc];
+}
 
-#pragma mark -
-#pragma mark View lifecycle
-
+#pragma mark - UIViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.tableView.rowHeight = 44.0f;
 	
-	avatarView.layer.cornerRadius = 8.0f;
-	avatarView.layer.borderWidth = 1.0f;
-	avatarView.layer.masksToBounds = YES;
-	avatarView.layer.borderColor = [[UIColor clearColor] CGColor];
+	self.avatarImageView.layer.cornerRadius = 8.0f;
+	self.avatarImageView.layer.borderWidth = 1.0f;
+	self.avatarImageView.layer.masksToBounds = YES;
+	self.avatarImageView.layer.borderColor = [[UIColor clearColor] CGColor];
+		
+    self.quadrantControl.delegate = self;
 	
-	self.tableSectionFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 130)];
+	[self.quadrantControl setNumber:[NSNumber numberWithInt:190]
+                            caption:@"following"
+                             action:@selector(didSelectFollowingQuadrant)
+                        forLocation:TopLeftLocation];
 	
-	MTQuadrantControl * quadrantControl = [[[MTQuadrantControl alloc] initWithFrame:CGRectMake(10, 20, 300, 90)] autorelease];
-	quadrantControl.delegate = self;
+	[self.quadrantControl setNumber:[NSNumber numberWithInt:2969]
+                            caption:@"tweets" 
+                             action:@selector(didSelectTweetsQuadrant)
+                        forLocation:TopRightLocation];
 	
-	[quadrantControl setNumber:[NSNumber numberWithInt:127]
-					   caption:@"following"
-						action:@selector(didSelectFollowingQuadrant)
-				   forLocation:TopLeftLocation];
+	[self.quadrantControl setNumber:[NSNumber numberWithInt:1013] 
+                            caption:@"followers" 
+                             action:@selector(didSelectFollowersQuadrant)
+                        forLocation:BottomLeftLocation];
 	
-	[quadrantControl setNumber:[NSNumber numberWithInt:1728]
-					   caption:@"tweets" 
-						action:@selector(didSelectTweetsQuadrant)
-				   forLocation:TopRightLocation];
-	
-	[quadrantControl setNumber:[NSNumber numberWithInt:352] 
-					   caption:@"followers" 
-						action:@selector(didSelectFollowersQuadrant)
-				   forLocation:BottomLeftLocation];
-	
-	[quadrantControl setNumber:[NSNumber numberWithInt:61] 
-					   caption:@"favorites" 
-						action:@selector(didSelectFavoritesQuadrant)
-				   forLocation:BottomRightLocation];
-	
-	[self.tableSectionFooterView addSubview:quadrantControl];
+	[self.quadrantControl setNumber:[NSNumber numberWithInt:115] 
+                            caption:@"listed" 
+                             action:@selector(didSelectListedQuadrant)
+                        forLocation:BottomRightLocation];	
 }
 
-#pragma mark -
-#pragma mark Actions
+- (void)viewDidUnload {
+    [super viewDidUnload];
+    
+    _avatarImageView = nil;
+    _nameLabel = nil;
+    _twitterUsernameLabel = nil;
+    _twitterUserIDLabel = nil;
+    _quadrantControl = nil;
+}
+
+#pragma mark - Actions
 
 - (void)didSelectFollowingQuadrant {
 	NSLog(@"Following");
@@ -94,49 +108,18 @@ typedef enum {
 	NSLog(@"Followers");
 }
 
-- (void)didSelectFavoritesQuadrant {
-	NSLog(@"Favorites");
+- (void)didSelectListedQuadrant {
+	NSLog(@"Listed");
 }
 
-
-#pragma mark -
-#pragma mark Table view data source
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 3;
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-	switch (indexPath.row) {
-		case BioRowIndex:
-		case LocationRowIndex:
-		case WebsiteRowIndex:
-		default:
-			return 44.0f;
-	}
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
-	switch (section) {
-		case InformationSectionIndex:
-			return self.tableSectionFooterView;
-		default:
-			return nil;
-	}
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
-	switch (section) {
-		case InformationSectionIndex:
-			return self.tableSectionFooterView.bounds.size.height;
-		default:
-			return 0.0f;
-	}
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -146,15 +129,15 @@ typedef enum {
 		case BioRowIndex:
 			cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault 
 										   reuseIdentifier:nil] autorelease];
-			cell.textLabel.text = @"Hacker from the Rustbelt, living in Texas.";
+			cell.textLabel.text = NSLocalizedString(@"Hacker from the Rustbelt, living in Austin, TX. iOS Developer at @gowalla, and co-founder of @austinrb", nil);
 			cell.textLabel.font = [UIFont systemFontOfSize:14];
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 			break;
 		case LocationRowIndex:
 			cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 
 										   reuseIdentifier:nil] autorelease];
-			cell.textLabel.text = @"location";
-			cell.detailTextLabel.text = @"Austin, TX";
+			cell.textLabel.text = NSLocalizedString(@"location", nil);
+			cell.detailTextLabel.text = NSLocalizedString(@"Austin, TX", nil);
 			cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 			break;
 		case WebsiteRowIndex:
@@ -169,29 +152,11 @@ typedef enum {
 	return cell;
 }
 
-
-#pragma mark -
-#pragma mark Table view delegate
-
+#pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-
-#pragma mark -
-#pragma mark Memory management
-
-
-- (void)viewDidUnload {
-    avatarView = nil;
-}
-
-- (void)dealloc {
-	[tableSectionFooterView release];
-    [super dealloc];
-}
-
 
 @end
 
