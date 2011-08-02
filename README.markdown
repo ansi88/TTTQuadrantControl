@@ -1,20 +1,20 @@
-MTQuadrantControl
+TTTQuadrantControl
 =================
 
 ## A 4-way button disguised as a table cell, as seen in Tweetie 2
 
-![Screenshot of MTQuadrantControl](http://mattt.github.com/MTQuadrantControl/screenshot.png "MTQuadrantControl Screenshot")
+![Screenshot of TTTQuadrantControl](http://mattt.github.com/TTTQuadrantControl/screenshot.png "TTTQuadrantControl Screenshot")
 
 ## Demo
 
-After cloning the repository, open the Xcode Project file <tt>/MTQuadrantControl/Example/Nitwit.xcodeproj</tt>. Build and Run in the iPhone Simulator to see it in action. The specified quadrant actions are stubbed out as an example.
+After cloning the repository, open the Xcode Project file <tt>/TTTQuadrantControl/Example/Nitwit.xcodeproj</tt>. Build and Run in the iPhone Simulator to see it in action. The specified quadrant actions are stubbed out as an example.
 
 ## Usage
 
 Initialize as follows in a UITableViewController or subclass (works best with table views with a <strong>grouped</strong> style):
 
 <code>
-  MTQuadrantControl * quadrantControl = [[[MTQuadrantControl alloc] initWithFrame:CGRectMake(10, 20, 300, 90)] autorelease];
+  TTTQuadrantControl * quadrantControl = [[[TTTQuadrantControl alloc] initWithFrame:CGRectMake(10, 20, 300, 90)] autorelease];
 	quadrantControl.delegate = self;
 	[quadrantControl setNumber:[NSNumber numberWithInt:127]
 					   caption:@"following"
@@ -54,9 +54,9 @@ In its current release, the horizontal and vertical dividing lines in the quadra
 
 ## License
 
-MTQuadrantControl is licensed under the MIT License:
+TTTQuadrantControl is licensed under the MIT License:
 
-  Copyright (c) 2010 Mattt Thompson (http://mattt.me/)
+  Copyright (c) 2011 Mattt Thompson (http://mattt.me/)
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to deal
