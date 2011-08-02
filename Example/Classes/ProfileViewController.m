@@ -132,6 +132,15 @@ enum {
     return 3;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case BioRowIndex:
+            return 77.0f;
+        default:
+            return tableView.rowHeight;
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell * cell = nil;
 	
@@ -141,6 +150,7 @@ enum {
 										   reuseIdentifier:nil] autorelease];
 			cell.textLabel.text = NSLocalizedString(@"Hacker from the Rustbelt, living in Austin, TX. iOS Developer at @gowalla, and co-founder of @austinrb", nil);
 			cell.textLabel.font = [UIFont systemFontOfSize:14];
+            cell.textLabel.numberOfLines = 0;
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 			break;
 		case LocationRowIndex:
