@@ -21,6 +21,7 @@
 // SOFTWARE.
 
 #import <UIKit/UIKit.h>
+
 @class TTTQuadrantControl;
 
 @interface ProfileViewController : UITableViewController {
