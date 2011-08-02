@@ -29,11 +29,6 @@ quadrantControl.delegate = self;
                forLocation:BottomRightLocation];
 ```
 
-- `number` - the number displayed at top
-- `caption` - the text displayed below the number
-- `action` - a selector to be performed by the delegate
-- `location` - the specified quadrant
-
 ## License
 
 TTTQuadrantControl is licensed under the MIT License:
